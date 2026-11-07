@@ -1,0 +1,6 @@
+syntax = "proto3";
+package document.v1;
+option go_package = "github.com/rinatkh/homework_go_18/pkg/proto/document/v1;documentv1";
+service DocumentService { rpc GetDocument(GetDocumentRequest) returns(DocumentResponse); }
+message GetDocumentRequest { int64 id = 1; }
+message DocumentResponse { int64 id = 1; string title = 2; string status = 3; }
